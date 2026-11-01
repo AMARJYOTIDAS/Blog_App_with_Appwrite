@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import "./app.css";
+// import "./app.css";
 import AuthService from "./Appwrite/Auth";
 import { login, logout } from "./Store/authSlice";
 import Header from "./components/header/Header";
