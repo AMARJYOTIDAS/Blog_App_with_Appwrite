@@ -1,4 +1,3 @@
-import { useReducer } from "react";
 import config from "../config/config";
 
 import { Client, Account, ID } from "appwrite";
@@ -34,9 +33,9 @@ export class AuthService {
   }
   async login({ email, password }) {
     try {
-      await this.account.createEmailSession(email, password);
+      return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
-      return error;
+      throw error;
     }
   }
 
